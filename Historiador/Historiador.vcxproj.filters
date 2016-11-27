@@ -24,12 +24,21 @@
     <ClCompile Include="Servidor_Historiador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="gateway_historiador.h">
+    <ClInclude Include="Servidor_Historiador.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Servidor_Historiador.h">
+    <ClInclude Include="fila_gateway_historiador.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gateway_historiador.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
