@@ -12,26 +12,26 @@ using namespace std;
 using namespace boost::interprocess;
 
 
-class Fila_Gateway_Historiador
+class Fila_Historiador_Servidor
 {
-	string nome = "gateway_historiador";
+	string nome = "historiador_servapp";
 	boost::scoped_ptr<message_queue> mq;
 public:
-	Fila_Gateway_Historiador()
+	Fila_Historiador_Servidor()
 	{
 		message_queue::remove(nome.c_str());
-		mq.reset(new message_queue(create_only, nome.c_str(), 1000000, sizeof(struct position_t)));
+		mq.reset(new message_queue(create_only, nome.c_str(), 1, sizeof(struct historical_data_reply_t)));
 	}
-	~Fila_Gateway_Historiador()
+	~Fila_Historiador_Servidor()
 	{
 		message_queue::remove(nome.c_str());
 	}
 
-	void write_position_t(struct position_t &position_t)
+	void write_historical_data_reply_t(struct historical_data_reply_t &historical_data_reply_t)
 	{
 		try
 		{
-			(*mq).send(&position_t, sizeof(position_t), 1);
+			(*mq).send(&historical_data_reply_t, sizeof(historical_data_reply_t), 1);
 		}
 		catch (interprocess_exception &ex)
 		{
@@ -41,14 +41,14 @@ public:
 		}
 	}
 
-	size_t read_position_t(struct position_t &item)
+	size_t read_historical_data_reply_t(struct historical_data_reply_t &item)
 	{
 		size_t msg_size(0);
 		unsigned int priority(1);
 
 		try
 		{
-			(*mq).try_receive(&item, sizeof(item), msg_size, priority);
+			(*mq).receive(&item, sizeof(item), msg_size, priority);
 			return msg_size;
 		}
 		catch (interprocess_exception &ex)

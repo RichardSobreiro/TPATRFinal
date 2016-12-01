@@ -18,27 +18,27 @@
     <ClCompile Include="Historiador.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gateway_historiador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Servidor_Historiador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="threads.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Servidor_Historiador.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="fila_gateway_historiador.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="util.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gateway_historiador.hpp">
+    <ClInclude Include="fila_servidor_historiador.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fila_historiador_servidor.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="threads.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

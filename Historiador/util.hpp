@@ -5,6 +5,7 @@
 #include <boost/regex.hpp>
 #include <boost/interprocess/ipc/message_queue.hpp>
 #include <boost/interprocess/sync/interprocess_semaphore.hpp>
+#include <boost/thread/mutex.hpp>
 
 using namespace std;
 using namespace boost::interprocess;

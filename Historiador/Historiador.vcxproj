@@ -115,15 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gateway_historiador.cpp" />
     <ClCompile Include="Historiador.cpp" />
-    <ClCompile Include="Servidor_Historiador.cpp" />
+    <ClCompile Include="threads.cpp" />
     <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fila_gateway_historiador.hpp" />
-    <ClInclude Include="gateway_historiador.hpp" />
-    <ClInclude Include="Servidor_Historiador.h" />
+    <ClInclude Include="fila_historiador_servidor.hpp" />
+    <ClInclude Include="fila_servidor_historiador.hpp" />
+    <ClInclude Include="threads.hpp" />
     <ClInclude Include="util.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
